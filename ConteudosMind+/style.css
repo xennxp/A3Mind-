@@ -1,0 +1,120 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: "Montserrat", sans-serif;
+  }
+
+.header_principal{
+    background: linear-gradient(150deg, #583DC7, #583DC7, #281766);
+    padding: 80px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar {
+    background-color: #ffffff;
+    padding: 20px 80px;
+    border-radius: 25px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 180px;
+  }
+
+
+.nav_links {
+    list-style: none;
+    display: flex;
+    gap: 100px;
+  }
+
+.nav_links a {
+   font-family: "Montserrat", sans-serif;
+    text-decoration: none;
+    font-size: 1.5em;
+    font-weight: 600;
+    color: #7B5DF7;
+    transition: 0.3s ease;
+    position: relative;
+  }
+
+  .container {
+    padding: 80px 100px;
+    max-width: 1500px;
+    margin: auto;
+  }
+
+  .titulo_conteudo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .titulo_conteudo h1{
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #222;
+  }
+  
+ .logo_direita{
+  font-size: 1.5em;
+ }
+
+ .conteudo_artigo {
+  display: flex;
+  gap: 40px;
+  margin-top: 30px;
+}
+
+.indice {
+  margin-top: 30px;
+  border: 1px solid #ccc;
+  padding: 40px;
+  max-width: 300px;
+  background-color: #fafafa;
+  font-size: 1em;
+}
+
+.indice ul {
+  list-style-type:circle;
+  padding: 0;
+  margin-top: 10px;
+}
+
+.indice li {
+  margin-top: 20px;
+}
+
+.indice a {
+  text-decoration: none;
+  color: #444;
+}
+
+.indice a:hover {
+  color: #00bfa6;
+}
+
+.texto-artigo {
+  font-size: 1.2em;
+  line-height: 1.6;
+}
+
+.texto-artigo h2 {
+  margin-top: 100px;
+  color: #222;
+  margin-bottom: 30px;
+}
+
+code {
+  background-color: #eee;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-family: monospace;
+}
+

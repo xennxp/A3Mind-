@@ -8,39 +8,42 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=MuseoModerno:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
 </head>
 <body>
-  <header>
-    <div class="logo gradient-text">Mind+</div>
-    <nav>
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Jogos</a></li>
-        <li><a href="#">Quiz</a></li>
-        <li><a href="#">Aprender</a></li>
-      </ul>
+  <header class="header_principal">
+    <nav class="navbar">
+        <img src="/img/Mind+.png" alt="logo">
+        <ul class="nav_links">
+            <li><a href="">Home</a></li>
+            <li><a href="">Jogos</a></li>
+            <li><a href="">Quiz</a></li>
+            <li><a href="">Aprender</a></li>
+        </ul>
     </nav>
-  </header>
+</header>
 
-  <section class="hero">
-    <div class="hero-content">
-      
-      <div class="hero-esquerda">
-        <h1 class="logo-hero ">Mind+</h1>
-        <h2>Estudando pra valer</h2>
-      </div>
-      
-      <div class="hero-direita">
-        <h2 class="slogan">Destrave seu potencial com jogos educativos!</h2>
-        <p class="descricao">
-          Aprenda se divertindo com desafios que estimulam o raciocínio lógico, a criatividade e a memória.
-        </p>
-        <a href="#jogos" class="hero-btn">Começar agora!</a>
-      </div>
-      
+<section class="hero">
+  <div class="hero-content">
+    
+    <div class="hero-esquerda">
+      <h1 class="logo-hero ">Mind+</h1>
+      <h2>Estudando pra valer</h2>
     </div>
-  </section>
+    
+    <div class="hero-direita">
+      <h2 class="slogan">Destrave Seu Potencial com Jogos Educativos!</h2>
+      <p class="descricao">
+        Aprenda se divertindo com desafios que estimulam o raciocínio lógico, a criatividade e a memória.
+      </p>
+      <a href="#jogos" class="hero-btn">Comece a aprender agora!</a>
+    </div>
+    
+  </div>
+</section>
+
+
 
   <section class="destaque">
     <img src="img/estudantes.png" alt="ilustração educativa" />
@@ -55,16 +58,19 @@
     <h2>Conteúdos mais Visitados</h2>
     <div class="cards">
       <div class="card">
+        <img src="img/funcoesIMG.png" alt="">
         <h3>Funções de 1º e 2º grau</h3>
         <p>Explore gráficos, equações e muito mais.</p>
-        <a href="#" class="card-btn">Visualizar</a>
+        <a href="ConteudosMind+/ProdutoCartesiano.html"  target="_blank" class="card-btn">Visualizar</a>
       </div>
       <div class="card">
+        <img src="img/vetoresIMG.png" alt="">
         <h3>Vetores</h3>
         <p>Aprenda sobre soma, direção e sentido de vetores.</p>
         <a href="#" class="card-btn">Visualizar</a>
       </div>
       <div class="card">
+        <img src="img/matrizesIMG.png" alt="">
         <h3>Matrizes</h3>
         <p>Descubra operações básicas e aplicações de matrizes.</p>
         <a href="#" class="card-btn">Visualizar</a>
@@ -73,6 +79,93 @@
     <a href="#" class="btn ver-mais">Ver Mais</a>
   </section>
 
+  <section class="quiz-cta">
+    <div class="quiz-container">
+      <div class="quiz-image">
+        <img src="img/livro.png" alt="Tablet com quiz" />
+      </div>
+      <div class="quiz-text">
+        <h2>Desafie sua mente com nossos <br><span>Quizzes Matemáticos!</span></h2>
+        <p>Teste seus conhecimentos com quizzes rápidos e interativos. São perguntas de diversos níveis e temas para você aprender se divertindo!</p>
+        <a href="#" class="btn-quiz">Começar Quiz</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="games-section">
+    <div class="games-content">
+      <h2>Jogos</h2>
+      <p>
+        Explore jogos educativos que tornam o aprendizado do<br>
+        matemática mais leve, divertido e interativo.<br>
+        Pratique conceitos enquanto se diverte!
+      </p>
+    </div>
+  
+    <div class="games-carousel">
+      <div class="carousel-track">
+        <div class="game-card">
+          <a href="/JogoPortas/index.html" target="_blank">
+            <img src="img/portas.png" alt="Jogo das Portas" />
+        </a>
+          <h3>Jogo das Portas</h3>
+          <p>Resolva equações e escolha a porta certa! Teste seu raciocínio rápido em um desafio matemático.</p>
+          <a href="/JogoPortas/index.html"></a>
+        </div>
+  
+        <div class="game-card">
+          <img src="img/naval.png" alt="Batalha Naval" />
+          <h3>Batalha Naval</h3>
+          <p></p>
+        </div>
+  
+        <div class="game-card">
+          <img src="img/campo-minado.png" alt="Campo Minado" />
+          <h3>Campo Minado</h3>
+          <p>Cuide onde pisa! Resolva expressões lógicas e evite as minas.</p>
+        </div>
+      </div>
+  
+      <div class="carousel-controls">
+        <button class="carousel-prev">❮</button>
+        <button class="carousel-next">❯</button>
+      </div>
+  
+      <div class="carousel-progress">
+        <div class="progress-bar"></div>
+      </div>
+    </div>
+  </section>
+  
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-logo">
+        <img src="img/Mind+.png" alt="Mind+ Logo" />
+      </div>
+  
+      <nav class="footer-nav">
+        <a href="#">Home</a>
+        <a href="#">Jogos</a>
+        <a href="#">Quiz</a>
+        <a href="#">Aprender</a>
+      </nav>
+  
+      <div class="footer-newsletter">
+        <p><strong>Inscreva-se</strong><br>
+        Conteúdo exclusivo para quem faz parte da nossa comunidade</p>
+        <form>
+          <input type="email" placeholder="Digite seu email" required />
+          <button type="submit">Enviar</button>
+        </form>
+      </div>
+    </div>
+  
+    <div class="footer-bottom">
+      <p>© 2025 - All Rights Reserved</p>
+    </div>
+  </footer>
+
+  
   <script src="script.js"></script>
 </body>
 </html>

@@ -1,110 +1,110 @@
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
   }
   
+
   body {
-    font-family: 'Segoe UI', sans-serif;
-    background: linear-gradient(180deg, #583DC7, #281766);
+    font-family: "Montserrat", sans-serif;
+    background: linear-gradient(90deg, #583DC7, #281766);
     color: #fff;
-    padding-top: 140px;
+    height: 100vh;
   }
   
-  header {
-    position: fixed;
-    top: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 90%;
-    max-width: 1000px;
-    background: #fff;
-    color: #000;
-    padding: 1rem 2rem;
-    border-radius: 50px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  .header_principal{
+    padding: 40px 0;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+}
+
+.navbar {
+    background-color: #ffffff;
+    padding: 20px 80px;
+    border-radius: 25px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    display: flex;
     align-items: center;
-    z-index: 1000;
-  } 
-  
-  .logo {
-    font-family: "MuseoModerno", sans-serif;
-    font-optical-sizing: auto;
-    font-size: 1.8rem;
+    justify-content: space-between;
+    gap: 180px;
   }
-  .gradient-text {
-    background: linear-gradient(90deg, #7B5DF7, #04CF96);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    display: inline-block;
-  }
-  
-  nav ul {
-    display: flex;
-    gap: 2rem;
+
+
+.nav_links {
     list-style: none;
+    display: flex;
+    gap: 100px;
   }
 
-  nav a {
-    color: linear-gradient (180 deg, #7B5DF7, );
+.nav_links a {
+   font-family: "Montserrat", sans-serif;
     text-decoration: none;
-    font-weight: 700;
-  }
-  
-  .hero {
-    padding: 5rem 2rem;
-    text-align: left;
-  }
-  
-  .hero-content {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 3rem;
-    max-width: 1100px;
-    margin: 0 auto;
-  }
-  
-  .hero-esquerda {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .logo-hero {
-    font-size: 7rem;
-    font-family: 'MuseoModerno', sans-serif;
-    font-weight: normal;
-    margin-bottom: 1rem;
-    display: inline-block;
-    color: #fff;
-    
-    
-  }
-  .hero-direita {
-    max-width: 500px;
-  }
-
-  .hero-btn {
-    display: inline-block;
-    margin-top: 1rem;
-    padding: 0.5rem 1rem;
-    background-color: #00ffae;
-    color: #000;
-    border-radius: 20px;
-    text-decoration: none;
+    font-size: 1.5em;
     font-weight: 600;
-    
+    color: #7B5DF7;
+    transition: 0.3s ease;
+    position: relative;
   }
-  
-  .slogan {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-  }
-  
+
+
+/*FIM DO HEADER/NAVBAR ------------------------------------------------------------------------------------------*/
+
+.hero {
+  padding: 150px;
+}
+
+.hero-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.hero-esquerda {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo-hero {
+  font-size: 7rem;
+  font-family: 'MuseoModerno', sans-serif;
+  font-weight: 300;
+  color: #fff;
+}
+
+.hero-direita {
+  max-width: 500px;
+
+}
+
+.hero-btn {
+  background-color: #00bfa6;
+  color: white;
+  padding: 12px 80px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 600;
+  box-shadow: 0 8px 20px rgba(0, 191, 166, 0.4);
+  transition: background-color 0.3s ease;
+}
+
+.hero-btn:hover {
+  background-color: #00a890;
+}
+
+.slogan {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+ 
+/*FIM DO HERO------------------------------------------------------------------------------------------*/
+
+
   .descricao {
     font-size: 1.1rem;
     color: #ddd;
@@ -136,6 +136,11 @@
     text-align: center;
     padding: 3rem 2rem;
   }
+
+.conteudos img {
+  width: 200px;
+}
+
   .cards {
     display: flex;
     flex-wrap: wrap;
@@ -143,6 +148,7 @@
     gap: 2rem;
     margin-top: 2rem;
   }
+
   .card {
     background: #fff;
     color: #000;
@@ -151,6 +157,7 @@
     width: 250px;
     box-shadow: 0 8px 20px rgba(0,0,0,0.2);
   }
+
   .card-btn {
     display: inline-block;
     margin-top: 1rem;
@@ -161,6 +168,7 @@
     text-decoration: none;
     font-weight: 600;
   }
+  
   .ver-mais {
     margin-top: 2rem;
   }
@@ -182,4 +190,243 @@
     .slogan {
       font-size: 1.5rem;
     }
+  }
+
+  .quiz-cta {
+   
+    padding: 60px 20px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .quiz-container {
+    background: #fff;
+    border-radius: 40px;
+    padding: 40px;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    max-width: 1000px;
+    width: 100%;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    flex-wrap: wrap;
+  }
+  
+  .quiz-image img {
+    max-width: 220px;
+    height: auto;
+  }
+  
+  .quiz-text h2 {
+    font-size: 1.8em;
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 15px;
+  }
+  
+  .quiz-text h2 span {
+    color: #2a2a2a;
+  }
+  
+  .quiz-text p {
+    color: #555;
+    font-size: 1em;
+    margin-bottom: 20px;
+    max-width: 450px;
+  }
+  
+  .btn-quiz {
+    background-color: #00c28b;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0 6px 15px rgba(0, 194, 139, 0.3);
+    transition: background 0.3s;
+  }
+  
+  .btn-quiz:hover {
+    background-color: #00a877;
+  }
+
+  .site-footer {
+    background-color: #fff;
+    padding: 40px 20px 20px;
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    border-top: 1px solid #eee;
+  }
+  
+  .footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1100px;
+    margin: 0 auto;
+    gap: 30px;
+  }
+  
+  .footer-logo img {
+    height: 40px;
+  }
+  
+  .footer-nav {
+    display: flex;
+    gap: 30px;
+    flex: 1;
+    justify-content: center;
+  }
+  
+  .footer-nav a {
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+  }
+  
+  .footer-newsletter {
+    max-width: 250px;
+    font-size: 13px;
+  }
+  
+  .footer-newsletter p {
+    margin-bottom: 10px;
+    color: #222;
+  }
+  
+  .footer-newsletter form {
+    display: flex;
+    gap: 6px;
+  }
+  
+  .footer-newsletter input {
+    flex: 1;
+    padding: 8px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    font-size: 13px;
+  }
+  
+  .footer-newsletter button {
+    background-color: #7e5af5;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 8px 16px;
+    font-size: 13px;
+    cursor: pointer;
+  }
+  
+  .footer-newsletter button:hover {
+    background-color: #5d3fd3;
+  }
+  
+  .footer-bottom {
+    text-align: center;
+    font-size: 12px;
+    color: #777;
+    margin-top: 30px;
+  }
+
+  .games-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    background: linear-gradient(to right, #4c1d95, #3b82f6);
+    padding: 60px 40px;
+    color: white;
+    gap: 40px;
+    flex-wrap: wrap;
+  }
+  
+  .games-content {
+    flex: 1;
+    max-width: 350px;
+  }
+  
+  .games-content h2 {
+    font-size: 32px;
+    color: #00d0aa;
+    font-weight: bold;
+  }
+  
+  .games-content h2 span {
+    color: #00d0aa;
+  }
+  
+  .games-content p {
+    margin-top: 10px;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+  
+  .games-carousel {
+    flex: 2;
+    position: relative;
+  }
+  
+  .carousel-track {
+    display: flex;
+    overflow-x: auto;
+    gap: 20px;
+    scroll-behavior: smooth;
+    padding-bottom: 10px;
+  }
+  
+  .game-card {
+    background: white;
+    border-radius: 20px;
+    color: black;
+    width: 220px;
+    flex-shrink: 0;
+    padding: 16px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  }
+  
+  .game-card img {
+    width: 100%;
+    border-radius: 12px;
+    margin-bottom: 10px;
+  }
+  
+  .game-card h3 {
+    font-size: 16px;
+    margin-bottom: 8px;
+    font-weight: bold;
+  }
+  
+  .carousel-controls {
+    position: absolute;
+    top: -40px;
+    right: 10px;
+    display: flex;
+    gap: 10px;
+  }
+  
+  .carousel-controls button {
+    background-color: white;
+    color: #4c1d95;
+    border: none;
+    font-size: 20px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  
+  .carousel-progress {
+    height: 6px;
+    background: #e0e0e0;
+    border-radius: 10px;
+    margin-top: 10px;
+    overflow: hidden;
+  }
+  
+  .progress-bar {
+    width: 30%; /* atualize via JS */
+    height: 100%;
+    background-color: #00d0aa;
+    border-radius: 10px;
   }
