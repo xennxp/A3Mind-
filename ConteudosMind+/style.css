@@ -8,6 +8,19 @@
   body {
     font-family: "Montserrat", sans-serif;
   }
+  
+  .logo  {
+    font-family: "MuseoModerno", sans-serif;
+    font-optical-sizing: auto;
+    font-size: 1.8rem;
+  }
+
+  .gradient-text {
+    background: linear-gradient(90deg, #7b5df7, #04cf96);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+  }
 
 .header_principal{
     background: linear-gradient(150deg, #583DC7, #583DC7, #281766);
