@@ -1,127 +1,115 @@
-
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-  body {
-    font-family: "Montserrat", sans-serif;
-  }
-  
-  .logo  {
-    font-family: "MuseoModerno", sans-serif;
-    font-optical-sizing: auto;
-    font-size: 1.8rem;
-  }
+body {
+  font-family: "Montserrat", sans-serif;
+}
 
-  .gradient-text {
-    background: linear-gradient(90deg, #7b5df7, #04cf96);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    display: inline-block;
-  }
+.logo {
+  font-family: "MuseoModerno", sans-serif;
+  font-optical-sizing: auto;
+  font-size: 2.1rem;
+}
 
-.header_principal{
-    background: linear-gradient(150deg, #583DC7, #583DC7, #281766);
-    padding: 80px 0;
-    display: flex;
-    justify-content: center;
+
+.header_principal {
+  background: linear-gradient(150deg, #583DC7, #583DC7, #281766);
+  padding: 50px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.gradient-text {
+  background: linear-gradient(90deg, #7b5df7, #04cf96);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
 }
 
 .navbar {
-    background-color: #ffffff;
-    padding: 20px 80px;
-    border-radius: 25px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 180px;
-  }
+  background-color: #ffffff;
+  padding: 10px 50px;
+  border-radius: 25px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 180px;
+}
 
 
 .nav_links {
-    list-style: none;
-    display: flex;
-    gap: 100px;
-  }
+  list-style: none;
+  display: flex;
+  gap: 80px;
+}
 
 .nav_links a {
-   font-family: "Montserrat", sans-serif;
-    text-decoration: none;
-    font-size: 1.5em;
-    font-weight: 600;
-    color: #7B5DF7;
-    transition: 0.3s ease;
-    position: relative;
-  }
-
-  .container {
-    padding: 80px 100px;
-    max-width: 1500px;
-    margin: auto;
-  }
-
-  .titulo_conteudo {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  .titulo_conteudo h1{
-    font-size: 2.5em;
-    font-weight: bold;
-    color: #222;
-  }
-  
- .logo_direita{
-  font-size: 1.5em;
- }
-
- .conteudo_artigo {
-  display: flex;
-  gap: 40px;
-  margin-top: 30px;
-}
-
-.indice {
-  margin-top: 30px;
-  border: 1px solid #ccc;
-  padding: 40px;
-  max-width: 300px;
-  background-color: #fafafa;
-  font-size: 1em;
-}
-
-.indice ul {
-  list-style-type:circle;
-  padding: 0;
-  margin-top: 10px;
-}
-
-.indice li {
-  margin-top: 20px;
-}
-
-.indice a {
+  font-family: "Montserrat", sans-serif;
   text-decoration: none;
-  color: #444;
+  font-size: 1.2em;
+  font-weight: 600;
+  color: #7B5DF7;
+  transition: 0.3s ease;
+  position: relative;
 }
 
-.indice a:hover {
-  color: #00bfa6;
+.container {
+  padding: 80px 200px;
+  max-width: 1500px;
+  margin: auto;
 }
+
+.titulo_conteudo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.titulo_conteudo h1 {
+  font-size: 2.5em;
+  font-weight: bold;
+  color: #222;
+}
+
+.logo_direita {
+  font-size: 1.5em;
+}
+
 
 .texto-artigo {
   font-size: 1.2em;
-  line-height: 1.6;
+  line-height: 2;
 }
 
 .texto-artigo h2 {
   margin-top: 100px;
   color: #222;
   margin-bottom: 30px;
+}
+
+
+.texto_meio {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 30px;
+
+}
+
+.exemplos {
+  margin-top: 50px;
+  background: #DAD2FF;
+  padding: 50px 200px;
+  border-radius: 25px;
+}
+
+.lista_apli{
+  max-width: 900px;
 }
 
 code {
@@ -131,3 +119,135 @@ code {
   font-family: monospace;
 }
 
+
+.topicos {
+  padding: 50px 180px;
+}
+
+.topicos h2 {
+  font-size: 1.5em;
+  margin-bottom: 50px;
+}
+
+.cards {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: rgb(236, 236, 236);
+  border-radius: 20px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  padding: 20px;
+  width: 250px;
+}
+
+.card img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.card h3 {
+  margin: 10px 0;
+  font-size: 1em;
+  font-weight: 600;
+}
+
+.visualizar {
+  background-color: #2edcaa;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.ver-todos {
+  margin-top: 20px;
+  background-color: #9370DB; /* Roxo claro */
+  color: white;
+  border: none;
+  padding: 10px 30px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+   .site-footer {
+    background-color: #fff;
+    padding: 40px 20px 20px;
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    border-top: 1px solid #eee;
+  }
+  
+  .footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1100px;
+    margin: 0 auto;
+    gap: 30px;
+  }
+  
+  .footer-logo img {
+    height: 40px;
+  }
+  
+  .footer-nav {
+    display: flex;
+    gap: 30px;
+    flex: 1;
+    justify-content: center;
+  }
+  
+  .footer-nav a {
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+  }
+  
+  .footer-newsletter {
+    max-width: 250px;
+    font-size: 13px;
+  }
+  
+  .footer-newsletter p {
+    margin-bottom: 10px;
+    color: #222;
+  }
+  
+  .footer-newsletter form {
+    display: flex;
+    gap: 6px;
+  }
+  
+  .footer-newsletter input {
+    flex: 1;
+    padding: 8px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    font-size: 13px;
+  }
+  
+  .footer-newsletter button {
+    background-color: #7e5af5;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 8px 16px;
+    font-size: 13px;
+    cursor: pointer;
+  }
+  
+  .footer-newsletter button:hover {
+    background-color: #5d3fd3;
+  }
+  
+  .footer-bottom {
+    text-align: center;
+    font-size: 12px;
+    color: #777;
+    margin-top: 30px;
+  }

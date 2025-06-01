@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Produto Cartesiano</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=MuseoModerno:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=MuseoModerno:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
 
 </head>
-
 
 <body>
     <header class="header_principal">
@@ -30,47 +33,108 @@
             <div class="logo gradient-text">Mind+</div>
         </div>
 
-        <div class="conteudo_artigo">
-            <aside class="indice">
-                <strong>Confira neste Artigo</strong>
-                <ul>
-                    <li><a href="#">O que São Conjuntos</a></li>
-                    <li><a href="#">Como Representamos</a></li>
-                    <li><a href="#">O que é Produto Cartesiano?</a></li>
-                    <li><a href="#">Aplicações do Produto Cartesiano</a></li>
-                </ul>
-            </aside>
-
-            <section class="texto-artigo">
-                <h2 id="o-que-sao-conjuntos">🔷 O que são Conjuntos?</h2>
-                <p>Conjuntos são coleções de elementos (objetos, números, letras, etc.) que possuem alguma característica em comum. Cada elemento pertence ou não a um conjunto, e usamos chaves <code>{ }</code> para representá-los.</p>
-                <p><strong>Exemplo:</strong> O conjunto das vogais pode ser representado assim:<br>
+        <section class="texto-artigo">
+            <h2 id="o-que-sao-conjuntos">🔷 O que são Conjuntos?</h2>
+            <p>Conjuntos são coleções de elementos (objetos, números, letras, etc.) que possuem alguma característica em
+                comum. Cada elemento pertence ou não a um conjunto, e usamos chaves <code>{ }</code> para
+                representá-los.</p>
+            <p><strong>Exemplo:</strong> O conjunto das vogais pode ser representado assim:<br>
                 A = {a, e, i, o, u}</p>
 
-                <h2 id="como-representamos">✍️ Como Representamos?</h2>
-                <p>Notação: usamos letras maiúsculas para conjuntos e minúsculas para elementos.  Exemplo: x ∈ A significa "x pertence ao conjunto A". 
-                    Conjunto vazio: representado por {} ou ∅, não tem nenhum elemento.</p>
+            <h2 id="como-representamos">✍️ Como Representamos?</h2>
+            <p>Notação: usamos letras maiúsculas para conjuntos e minúsculas para elementos.
+            <p></p>Exemplo: x ∈ A significa "x pertence ao conjunto A".</p>
+            <p>Conjunto vazio: representado por {} ou ∅, não tem nenhum elemento.</p>
 
-                <h2 id="produto-cartesiano">🔷 O que é o Produto Cartesiano?</h2>
-                <p>O produto cartesiano entre dois conjuntos A e B é o conjunto formado por todos os pares ordenados (a, b), onde a ∈ A e b ∈ B.</p>
-                <p><strong>Exemplo:</strong> Se A = {1, 2} e B = {x, y}, então:<br>
-                A × B = {(1, x), (1, y), (2, x), (2, y)}</p>
-              </section>
+            <h2 class="produto-cartesiano">🔷 O que é o Produto Cartesiano?</h2>
+            <p>O produto cartesiano entre dois conjuntos A e B é o conjunto formado por todos os pares ordenados (a, b),
+                onde a ∈ A
+                e b ∈ B.</p>
+            <section class="texto_meio">
+                <p>Definição: Se temos dois conjuntos A e B, o produto cartesiano entre eles é:</p>
+                <p>A×B={(a,b) ∣ a∈A e b∈B}</p>
+                <section class="exemplos">
+                    <p> Se A = {1, 2} e B = {x, y}, então:<br>
+                        A × B = {(1, x), (1, y), (2, x), (2, y)}</p>
+                </section>
+            </section>
 
-               
-        </div>
+
+            <h2 class="aplicacao">💡 Aplicações do Produto Cartesiano</h2>
+            <ul class="lista_apli">
+                <li>Em matemática, é usado para representar coordenadas em planos (como no plano cartesiano).</li>
+                <li>Em banco de dados, serve para combinar informações de duas tabelas..</li>
+                <li>Na lógica e na programação, ajuda a trabalhar com pares e combinações de dados.</li>
+            </ul>
+            </div>           
     </main>
+    <hr>
+
+<section class="topicos">
+  <h2>Descubra outros Tópicos</h2>
+  <div class="cards">
+    <div class="card">
+      <img src="/img/matrizesIMG.png" alt="Matrizes">
+      <h3>Matrizes</h3>
+      <button class="visualizar">Visualizar</button>
+    </div>
+    <div class="card">
+      <img src="/img/vetoresIMG.png" alt="Vetores">
+      <h3>Vetores</h3>
+      <button class="visualizar">Visualizar</button>
+    </div>
+    <div class="card">
+      <img src="/img/funcoesIMG.png" alt="Funções do 2º Grau">
+      <h3>Matrizes</h3>
+      <button class="visualizar">Visualizar</button>
+    </div>
+    <div class="card">
+      <img src="/img/vetoresIMG.png" alt="Vetores">
+      <h3>Vetores</h3>
+      <button class="visualizar">Visualizar</button>
+    </div>
+    <div class="card">
+      <img src="/img/funcoesIMG.png" alt="Funções do 2º Grau">
+      <h3>Matrizes</h3>
+      <button class="visualizar">Visualizar</button>
+    </div>
+  </div>
+  <button class="ver-todos">Ver Todos</button>
+</section>
+
+<hr>
+
+<footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-logo">
+        <img src="/img/Mind+.png" alt="Mind+ Logo" />
+      </div>
+
+      <nav class="footer-nav">
+        <a href="#">Home</a>
+        <a href="#">Jogos</a>
+        <a href="#">Quiz</a>
+        <a href="#">Aprender</a>
+      </nav>
+
+      <div class="footer-newsletter">
+        <p><strong>Inscreva-se</strong><br>
+          Conteúdo exclusivo para quem faz parte da nossa comunidade</p>
+        <form>
+          <input type="email" placeholder="Digite seu email" required />
+          <button type="submit">Enviar</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2025 - All Rights Reserved</p>
+    </div>
+  </footer>
 
 
 
 
-
-
-
-
-
-
-
-    
 </body>
+
 </html>
