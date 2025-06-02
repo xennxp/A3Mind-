@@ -14,7 +14,6 @@ body {
   font-size: 2.1rem;
 }
 
-
 .header_principal {
   background: linear-gradient(150deg, #583DC7, #583DC7, #281766);
   padding: 50px 0;
@@ -79,6 +78,12 @@ body {
   font-size: 1.5em;
 }
 
+.confira {
+  margin-top: 30px;
+  border: 1px solid #7B5DF7;
+  padding: 35px;
+  max-width: 400px;
+}
 
 .texto-artigo {
   font-size: 1.2em;
@@ -86,11 +91,10 @@ body {
 }
 
 .texto-artigo h2 {
-  margin-top: 100px;
+  margin-top: 60px;
   color: #222;
   margin-bottom: 30px;
 }
-
 
 .texto_meio {
   display: flex;
@@ -98,7 +102,6 @@ body {
   justify-content: center;
   align-items: center;
   padding: 20px 30px;
-
 }
 
 .exemplos {

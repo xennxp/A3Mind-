@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Batalha dos Limites</title>
+  <style>
+    body {
+      background: linear-gradient(to bottom, #1b1b1b, #3a3a3a);
+      font-family: 'Segoe UI', sans-serif;
+      color: white;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+    }
+
+    h1 {
+      margin-top: 20px;
+    }
+
+    .game-container {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      margin-top: 30px;
+      position: relative;
+      height: 150px;
+    }
+
+    .character {
+      width: 120px;
+      font-size: 60px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+    }
+
+    .lives {
+      margin-top: 5px;
+      font-size: 20px;
+    }
+
+    .tip {
+      position: absolute;
+      top: -40px;
+      width: 140px;
+      font-size: 14px;
+      color: #8cf;
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 5px;
+      border-radius: 6px;
+    }
+
+    .battle-box {
+      background: #222;
+      margin: 30px auto;
+      padding: 20px;
+      border-radius: 10px;
+      width: 80%;
+      max-width: 500px;
+      box-shadow: 0 0 10px #555;
+    }
+
+    .question {
+      font-size: 20px;
+      margin-bottom: 15px;
+    }
+
+    .options button {
+      background-color: #444;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      margin: 10px;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .options button:hover {
+      background-color: #666;
+    }
+
+    .status {
+      font-size: 18px;
+      margin-top: 10px;
+      min-height: 24px;
+    }
+
+    .spell {
+      width: 20px;
+      height: 20px;
+      background: yellow;
+      border-radius: 50%;
+      position: absolute;
+      z-index: 10;
+    }
+
+    @keyframes shootRight {
+      0% { left: 160px; top: 90px; }
+      100% { left: calc(100% - 160px); top: 90px; }
+    }
+
+    @keyframes shootLeft {
+      0% { left: calc(100% - 160px); top: 90px; }
+      100% { left: 160px; top: 90px; }
+    }
+
+    .enemy-hit, .player-hit {
+      animation: hit 0.3s ease-in-out;
+    }
+
+    @keyframes hit {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.2); color: red; }
+      100% { transform: scale(1); }
+    }
+
+    .restart-btn {
+      background: #28a;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 10px;
+      font-size: 16px;
+      cursor: pointer;
+      margin-top: 15px;
+    }
+
+    .restart-btn:hover {
+      background: #3bf;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Batalha dos Limites ⚔️</h1>
+
+  <div class="game-container">
+    <div class="character" id="player">
+      <div class="tip" id="tip">💡 Dica aparece aqui</div>
+      🧙
+      <div class="lives" id="playerLives">❤️❤️❤️</div>
+    </div>
+    <div class="character" id="enemy">
+      👾
+      <div class="lives" id="enemyLives">❤️❤️❤️</div>
+    </div>
+  </div>
+
+  <div class="battle-box">
+    <div class="question" id="question">Carregando pergunta...</div>
+    <div class="options" id="options"></div>
+    <div class="status" id="status"></div>
+  </div>
+
+  <script>
+    const questions = [
+      {
+        question: "lim(x→2) (x² - 4)/(x - 2)",
+        options: ["2", "∞", "4", "Indeterminado"],
+        correct: "4",
+        tip: "💡 Fatorar pode ajudar."
+      },
+      {
+        question: "lim(x→0) sin(x)/x",
+        options: ["0", "1", "∞", "Não existe"],
+        correct: "1",
+        tip: "💡 Limite fundamental conhecido."
+      },
+      {
+        question: "lim(x→∞) (1 + 1/x)^x",
+        options: ["0", "e", "1", "∞"],
+        correct: "e",
+        tip: "💡 É a definição de um número famoso..."
+      },
+      {
+        question: "lim(x→3) (x² - 9)/(x - 3)",
+        options: ["0", "6", "3", "9"],
+        correct: "6",
+        tip: "💡 Tente fatorar e simplificar."
+      },
+      {
+        question: "lim(x→0⁺) ln(x)",
+        options: ["0", "-∞", "∞", "1"],
+        correct: "-∞",
+        tip: "💡 Gráfico de ln(x) ajuda aqui."
+      }
+    ];
+
+    let current = 0;
+    let playerLives = 3;
+    let enemyLives = 3;
+    let bossMode = false;
+    let correctAnswers = 0;
+    let wrongAnswers = 0;
+
+    const playerDiv = document.getElementById("player");
+    const enemyDiv = document.getElementById("enemy");
+    const questionDiv = document.getElementById("question");
+    const optionsDiv = document.getElementById("options");
+    const statusDiv = document.getElementById("status");
+    const tipDiv = document.getElementById("tip");
+
+    function updateLives() {
+      document.getElementById("playerLives").innerText = "❤️".repeat(playerLives);
+      document.getElementById("enemyLives").innerText = "❤️".repeat(enemyLives);
+    }
+
+    function castSpell(from, to) {
+      const spell = document.createElement("div");
+      spell.className = "spell";
+
+      if (from === "player") {
+        spell.style.left = "160px";
+        spell.style.animation = "shootRight 0.7s linear forwards";
+      } else {
+        spell.style.left = "calc(100% - 160px)";
+        spell.style.animation = "shootLeft 0.7s linear forwards";
+      }
+
+      document.body.appendChild(spell);
+      setTimeout(() => spell.remove(), 700);
+
+      const target = document.getElementById(to);
+      target.classList.add(to === "enemy" ? "enemy-hit" : "player-hit");
+      setTimeout(() => target.classList.remove(to === "enemy" ? "enemy-hit" : "player-hit"), 300);
+    }
+
+    function loadQuestion() {
+      if (playerLives <= 0 || enemyLives <= 0) return;
+
+      const q = questions[current % questions.length];
+      questionDiv.innerText = q.question;
+      tipDiv.innerText = q.tip || "💡 Pense com calma.";
+      optionsDiv.innerHTML = "";
+
+      q.options.forEach(opt => {
+        const btn = document.createElement("button");
+        btn.innerText = opt;
+        btn.onclick = () => checkAnswer(opt);
+        optionsDiv.appendChild(btn);
+      });
+    }
+
+    function checkAnswer(answer) {
+      const q = questions[current % questions.length];
+
+      if (answer === q.correct) {
+        correctAnswers++;
+        enemyLives--;
+        castSpell("player", "enemy");
+        statusDiv.innerText = "🎯 Acertou! Atingiu o inimigo!";
+      } else {
+        wrongAnswers++;
+        playerLives--;
+        castSpell("enemy", "player");
+        statusDiv.innerText = "❌ Errou! Foi atingido!";
+      }
+
+      updateLives();
+      current++;
+
+      setTimeout(() => {
+        statusDiv.innerText = "";
+        nextStep();
+      }, 1000);
+    }
+
+    function nextStep() {
+      if (enemyLives <= 0 && !bossMode) {
+        bossMode = true;
+        enemyLives = 5;
+        enemyDiv.innerHTML = "👹<div class='lives' id='enemyLives'>❤️❤️❤️❤️❤️</div>";
+        statusDiv.innerText = "⚠️ BOSS FINAL APARECEU!";
+        updateLives();
+        setTimeout(() => {
+          statusDiv.innerText = "";
+          loadQuestion();
+        }, 2000);
+      } else if (enemyLives <= 0 || playerLives <= 0) {
+        endGame();
+      } else {
+        loadQuestion();
+      }
+    }
+
+    function endGame() {
+      const result =
+        playerLives <= 0
+          ? "☠️ Você perdeu!"
+          : "🏆 Vitória! Todos os inimigos foram derrotados!";
+      document.querySelector(".battle-box").innerHTML = `
+        <h2>${result}</h2>
+        <p>Acertos: ${correctAnswers}</p>
+        <p>Erros: ${wrongAnswers}</p>
+        <button class="restart-btn" onclick="location.reload()">🔄 Reiniciar Jogo</button>
+      `;
+    }
+
+    updateLives();
+    loadQuestion();
+  </script>
+</body>
+</html>

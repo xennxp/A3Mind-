@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Polinômios</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=MuseoModerno:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header class="header_principal">
+        <nav class="navbar">
+            <div class="logo gradient-text">Mind+</div>
+            <ul class="nav_links">
+                <li><a href="">Home</a></li>
+                <li><a href="">Jogos</a></li>
+                <li><a href="">Quiz</a></li>
+                <li><a href="">Aprender</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <main class="container">
+        <div class="titulo_conteudo">
+            <h1>Polinômios</h1>
+            <div class="logo gradient-text">Mind+</div>
+        </div>
+
+        <div class="confira">
+            <h3>Confira neste artigo</h3>
+            <ul>
+                <li>O que são Polinômios? </li>
+                <li>Como Representamos?</li>
+                <li>Operações com Polinômios</li>
+                <li>Aplicações no Dia a Dia</li>
+            </ul>
+        </div>
+
+        <section class="texto-artigo">
+            <h2 id="o-que-sao-conjuntos">🔷 O que são Polinômios?</h2>
+            <p>Polinômios são expressões algébricas formadas por termos com variáveis elevadas a potências inteiras e
+                coeficientes reais.
+                Exemplo de polinômio:</p>
+            <p>P(x) = 2x³ - 5x² + 3x - 7</p>
+            <p>Cada termo tem:
+                Um coeficiente (número que multiplica a variável)
+                Uma potência da variável (grau do termo)</p>
+
+            <h2 id="como-representamos">✍️ Como Representamos?</h2>
+            <p>A forma geral de um polinômio é: P(x) = aₙxⁿ + aₙ₋₁xⁿ⁻¹ + ... + a₁x + a₀  Onde:
+                aₙ, aₙ₋₁, ..., a₀ são os coeficientes reais
+                n é o grau do polinômio maior expoente da variáve</p>
+            <p>🟣 Exemplo:</p>
+            <p>Se P(x) = 4x² + 2x + 1, então:
+                Grau = 2
+                Coeficiente de x² = 4
+                Termo independente = 1</p>
+
+            <h2 class="produto-cartesiano">🔷 O que é o Produto Cartesiano?</h2>
+            <p>O produto cartesiano entre dois conjuntos A e B é o conjunto formado por todos os pares ordenados (a, b),
+                onde a ∈ A
+                e b ∈ B.</p>
+            <section class="texto_meio">
+                <p>Definição: Se temos dois conjuntos A e B, o produto cartesiano entre eles é:</p>
+                <p>A×B={(a,b) ∣ a∈A e b∈B}</p>
+                <section class="exemplos">
+                    <p> Se A = {1, 2} e B = {x, y}, então:<br>
+                        A × B = {(1, x), (1, y), (2, x), (2, y)}</p>
+                </section>
+            </section>
+
+
+            <h2 class="aplicacao">💡 Aplicações do Produto Cartesiano</h2>
+            <ul class="lista_apli">
+                <li>Em matemática, é usado para representar coordenadas em planos (como no plano cartesiano).</li>
+                <li>Em banco de dados, serve para combinar informações de duas tabelas..</li>
+                <li>Na lógica e na programação, ajuda a trabalhar com pares e combinações de dados.</li>
+            </ul>
+            </div>
+    </main>
+    <hr>
+
+    <section class="topicos">
+        <h2>Descubra outros Tópicos</h2>
+        <div class="cards">
+            <div class="card">
+                <img src="/img/matrizesIMG.png" alt="Matrizes">
+                <h3>Matrizes</h3>
+                <button class="visualizar">Visualizar</button>
+            </div>
+            <div class="card">
+                <img src="/img/vetoresIMG.png" alt="Vetores">
+                <h3>Vetores</h3>
+                <button class="visualizar">Visualizar</button>
+            </div>
+            <div class="card">
+                <img src="/img/funcoesIMG.png" alt="Funções do 2º Grau">
+                <h3>Matrizes</h3>
+                <button class="visualizar">Visualizar</button>
+            </div>
+            <div class="card">
+                <img src="/img/vetoresIMG.png" alt="Vetores">
+                <h3>Vetores</h3>
+                <button class="visualizar">Visualizar</button>
+            </div>
+            <div class="card">
+                <img src="/img/funcoesIMG.png" alt="Funções do 2º Grau">
+                <h3>Matrizes</h3>
+                <button class="visualizar">Visualizar</button>
+            </div>
+        </div>
+        <button class="ver-todos">Ver Todos</button>
+    </section>
+
+    <hr>
+
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-logo">
+                <img src="/img/Mind+.png" alt="Mind+ Logo" />
+            </div>
+
+            <nav class="footer-nav">
+                <a href="#">Home</a>
+                <a href="#">Jogos</a>
+                <a href="#">Quiz</a>
+                <a href="#">Aprender</a>
+            </nav>
+
+            <div class="footer-newsletter">
+                <p><strong>Inscreva-se</strong><br>
+                    Conteúdo exclusivo para quem faz parte da nossa comunidade</p>
+                <form>
+                    <input type="email" placeholder="Digite seu email" required />
+                    <button type="submit">Enviar</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2025 - All Rights Reserved</p>
+        </div>
+    </footer>
+
+
+
+
+</body>
+
+</html>
