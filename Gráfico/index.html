@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Resolva e Plote</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    body {
+      font-family: sans-serif;
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      padding: 30px;
+      background: #f2f2f2;
+    }
+
+    #dicas {
+      background: #e0e0e0;
+      padding: 20px;
+      border-radius: 8px;
+      width: 300px;
+    }
+
+    #dicas h3 {
+      margin-top: 0;
+    }
+
+    #interface {
+      text-align: center;
+      max-width: 600px;
+    }
+
+    canvas {
+      max-width: 100%;
+      margin-top: 20px;
+      background: white;
+      border-radius: 8px;
+    }
+
+    input[type="number"] {
+      width: 60px;
+      padding: 5px;
+      font-size: 16px;
+      margin: 4px;
+    }
+
+    button {
+      padding: 10px 20px;
+      margin-top: 15px;
+      font-size: 16px;
+      cursor: pointer;
+      background-color: #1976d2;
+      color: white;
+      border: none;
+      border-radius: 5px;
+    }
+
+    #resultado {
+      margin-top: 20px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="dicas">
+    <h3>🧠 Dica:</h3>
+    <p>Para cada período do dia (manhã, tarde, noite), você tem 3 medições de temperatura.</p>
+    <ul id="valores-lista"></ul>
+    <p>💡 <strong>Calcule a média</strong> de cada trio usando:</p>
+    <code>(valor1 + valor2 + valor3) / 3</code>
+    <p>Depois, insira o valor médio correspondente no campo abaixo.</p>
+  </div>
+
+  <div id="interface">
+    <h2>📈 Complete o gráfico com os resultados</h2>
+
+    <label>Manhã: <input type="number" id="manha" /></label><br>
+    <label>Tarde: <input type="number" id="tarde" /></label><br>
+    <label>Noite: <input type="number" id="noite" /></label><br>
+
+    <button onclick="gerarGrafico()">Gerar Gráfico</button>
+
+    <p id="resultado"></p>
+
+    <canvas id="grafico"></canvas>
+  </div>
+
+  <script>
+    const ctx = document.getElementById("grafico").getContext("2d");
+
+    const labels = ["Manhã", "Tarde", "Noite"];
+
+    // Gerador de números aleatórios
+    function gerarTrioAleatorio() {
+      return [
+        Math.floor(Math.random() * 11) + 20, // 20 a 30
+        Math.floor(Math.random() * 11) + 20,
+        Math.floor(Math.random() * 11) + 20
+      ];
+    }
+
+    const dados = {
+      "Manhã": gerarTrioAleatorio(),
+      "Tarde": gerarTrioAleatorio(),
+      "Noite": gerarTrioAleatorio()
+    };
+
+    const respostaCorreta = [
+      Math.round(dados["Manhã"].reduce((a, b) => a + b) / 3),
+      Math.round(dados["Tarde"].reduce((a, b) => a + b) / 3),
+      Math.round(dados["Noite"].reduce((a, b) => a + b) / 3)
+    ];
+
+    // Atualiza a dica na lateral com os novos valores
+    const lista = document.getElementById("valores-lista");
+    for (const periodo in dados) {
+      const li = document.createElement("li");
+      li.textContent = `${periodo}: ${dados[periodo].join("°C, ")}°C`;
+      lista.appendChild(li);
+    }
+
+    const grafico = new Chart(ctx, {
+      type: "bar",
+      data: {
+        labels: labels,
+        datasets: [{
+          label: "Temperatura Média (°C)",
+          data: [],
+          backgroundColor: ["#ff9800", "#2196f3", "#4caf50"]
+        }]
+      },
+      options: {
+        scales: {
+          y: {
+            min: 15,
+            max: 40
+          }
+        }
+      }
+    });
+
+    function gerarGrafico() {
+      const manha = parseInt(document.getElementById("manha").value);
+      const tarde = parseInt(document.getElementById("tarde").value);
+      const noite = parseInt(document.getElementById("noite").value);
+
+      const entradas = [manha, tarde, noite];
+      grafico.data.datasets[0].data = entradas;
+      grafico.update();
+
+      let acertos = 0;
+      for (let i = 0; i < 3; i++) {
+        if (entradas[i] === respostaCorreta[i]) acertos++;
+      }
+
+      const resultado = document.getElementById("resultado");
+      if (acertos === 3) {
+        resultado.textContent = "✅ Tudo certo! Você calculou corretamente.";
+        resultado.style.color = "green";
+      } else {
+        resultado.textContent = `❌ Você acertou ${acertos} de 3. Verifique os cálculos e tente de novo!`;
+        resultado.style.color = "darkred";
+      }
+    }
+  </script>
+
+</body>
+</html>

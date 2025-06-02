@@ -114,15 +114,23 @@ h1 {
 }
 
 .btn-visualizar {
-    background: #4ade80;
+    background: #04CF96;
     color: white;
     padding: 8px 12px;
-    border-radius: 20px;
+    border-radius: 10px;
     text-decoration: none;
     font-weight: bold;
     font-size: 0.8em;
 }
 
 .btn-visualizar:hover {
-    background: #22c55e;
+    background: #7B5DF7;
+}
+
+.titulo{
+    margin-top: 20px;
+    font-family: "MuseoModerno", sans-serif;
+    font-size: 2.5em;
+    font-weight: 600;
+    color: #04CF96;
 }

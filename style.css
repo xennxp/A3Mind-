@@ -63,6 +63,53 @@ html {
     position: relative;
   }
 
+  .nav-item {
+      position: relative;
+    }
+
+    .nav-item > a {
+      text-decoration: none;
+      color: #6C63FF;
+      font-weight: bold;
+      transition: color 0.3s;
+       white-space: nowrap; 
+    }
+
+    .nav-item:hover > a {
+      color: #4B2E83;
+    }
+
+    /* Dropdown */
+    .dropdown {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      display: none;
+      flex-direction: column;
+      padding: 5px 30px;
+      z-index: 100;
+        min-width: max-content; /* <- Ajusta a largura para caber o texto */
+    }
+
+    .dropdown a {
+  padding: 10px 20px;
+  text-decoration: none;
+  color: #00bfa6;
+  transition: background 0.3s;
+  font-size: 20px;
+  white-space: nowrap; /* <- Evita quebra de linha */
+}
+
+    .dropdown a:hover {
+      background: #f0f0f0;
+    }
+
+    .nav-item:hover .dropdown {
+      display: flex;
+    }
 
 /*FIM DO HEADER/NAVBAR ------------------------------------------------------------------------------------------*/
 
@@ -121,6 +168,7 @@ html {
     color: #ddd;
     margin-bottom: 2rem;
   }
+
 
 /*FIM DO HERO------------------------------------------------------------------------------------------*/
   
@@ -260,10 +308,10 @@ html {
   .quiz-container {
     background: #fff;
     border-radius: 40px;
-    padding: 40px;
+    padding: 40px 100px;
     display: flex;
     align-items: center;
-    gap: 40px;
+    gap: 60px;
     max-width: 1000px;
     width: 100%;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
@@ -271,7 +319,7 @@ html {
   }
   
   .quiz-image img {
-    max-width: 220px;
+    max-width: 200px;
     height: auto;
   }
   
@@ -458,4 +506,54 @@ html {
   font-size: 14px;
   margin: 0 15px 15px;
   line-height: 1.4;
+}
+
+.grafico_cta{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 100px;
+}
+
+.card-grafico {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+  border-radius: 20px;
+  padding: 60px 20px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.1);
+  max-width: 800px;
+  gap: 30px;
+}
+
+.image img {
+  width: 200px;
+}
+
+.content h1 {
+  font-size: 24px;
+  color: #4a3fbf;
+  margin-bottom: 15px;
+}
+
+.content p {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 20px;
+  max-width: 400px;
+}
+
+button {
+  background: #0be881;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background: #09d37a;
 }

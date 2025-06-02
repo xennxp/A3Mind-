@@ -20,10 +20,29 @@
     <nav class="navbar">
       <div class="logo gradient-text">Mind+</div>
       <ul class="nav_links">
-        <li><a href="">Home</a></li>
-        <li><a href="">Jogos</a></li>
-        <li><a href="">Quiz</a></li>
-        <li><a href="/ConteudosMind+/Conteudos.html" target="_blank">Aprender</a></li>
+
+        <li class="nav-item"><a href="">Jogos</a>
+          <div class="dropdown">
+            <a href="/JogoPortas/index.html" target="_blank">Jogo das Portas</a>
+            <a href="/JogoCampo/index.html" target="_blank">Campo Minado</a>
+            <a href="/JogoCorrida/index.html" target="_blank">Corrida de Vetores</a>
+            <a href="/JogoBatalha/index.html" target="_blank">Batalha dos Limites</a>
+          </div>
+        </li>
+
+        <li class="nav-item"><a href="/ConteudosMind+/Conteudos.html" target="_blank">Aprender</a>
+          <div class="dropdown">
+            <a href="/ConteudosMind+/Funcoes12Grau.html" target="_blank">Funcões 1 e 2 Grau</a>
+            <a href="/ConteudosMind+/Polinomios.html" target="_blank">Polinômios</a>
+            <a href="/ConteudosMind+/ProdutoCartesiano.html" target="_blank">Produto Cartesiano</a>
+            <a href="/ConteudosMind+/Vetores.html" target="_blank">Vetores</a>
+            <a href="/ConteudosMind+/Funcoes12Grau.html" target="_blank"></a>
+          </div>
+        </li>
+        <li><a href="/quizz/index.html" target="_blank">Quiz</a></li>
+
+        <li><a href="/quizz/index.html" target="_blank">Gráfico Dinâmico</a></li>
+
       </ul>
     </nav>
   </header>
@@ -41,7 +60,7 @@
         <p class="descricao">
           Aprenda se divertindo com desafios que estimulam o raciocínio lógico, a criatividade e a memória.
         </p>
-        <a href="#jogos" class="hero-btn">Comece a aprender agora!</a>
+        <a href="/ConteudosMind+/Conteudos.html" class="hero-btn">Comece a aprender agora!</a>
       </div>
 
     </div>
@@ -51,13 +70,13 @@
     <img src="img/estudantes.png" alt="ilustração educativa" />
     <div class="destaque-texto">
       <h2>Aprenda matemática de forma divertida e interativa!</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      <p>Descubra uma nova maneira de aprender matemática! Resolva desafios, jogue, teste seus conhecimentos e torne o estudo muito mais divertido. Comece agora e transforme a matemática no seu superpoder!</p>
       <a href="#secao" class="btn_destaque">Jogar Agora</a>
     </div>
   </section>
 
 
-<p class="titulo_conteudo">Conteúdos Mais Visitados</p>
+  <p class="titulo_conteudo">Conteúdos Mais Visitados</p>
   <div class="conteudo">
     <div class=" wrapper">
       <div class="lista_cards">
@@ -85,11 +104,12 @@
           </div>
           <div class="conteudo_card">
             <h3 class="titulo_card">Funções de 1º e 2º grau </h3>
-            <p class="texto_card"> Entenda de forma simples e visual como funcionam as funções de 1º e 2º grau, suas características, gráficos e aplicações no dia a dia.</p>
+            <p class="texto_card"> Entenda de forma simples e visual como funcionam as funções de 1º e 2º grau, suas
+              características, gráficos e aplicações no dia a dia.</p>
             <div class="footer_card">
               <div class="vizualizacoes">
                 <img src="img/Olho.png" alt="">
-                <span class="numeros">224.4k</span>
+                <span class="numeros">200.9k</span>
               </div>
               <a href="/ConteudosMind+/Funcoes12Grau.html" target="_blank" class="btn_card">Vizualizar</a>
             </div>
@@ -101,11 +121,12 @@
           </div>
           <div class="conteudo_card">
             <h3 class="titulo_card">Vetores</h3>
-            <p class="texto_card"> Aprenda o que são vetores, como representá-los, suas principais propriedades e aplicações em problemas de geometria e física..</p>
+            <p class="texto_card"> Aprenda o que são vetores, como representá-los, suas principais propriedades e
+              aplicações em problemas de geometria e física..</p>
             <div class="footer_card">
               <div class="vizualizacoes">
                 <img src="img/Olho.png" alt="">
-                <span class="numeros">224.4k</span>
+                <span class="numeros">192.5k</span>
               </div>
               <a href="/ConteudosMind+/Vetores.html" target="_blank" class="btn_card">Vizualizar</a>
             </div>
@@ -115,55 +136,55 @@
     </div>
   </div>
 
-  <section class="jogos">
-  <div class="jogos-conteudo">
-    <h2>Jogos</h2>
-    <p>
-      Explore jogos educativos que tornam o aprendizado da matemática mais leve, divertido e interativo. 
-      Pratique conceitos enquanto se diverte!
-    </p>
-  </div>
-
-  <div class="cartoes">
-    <div class="cartao">
-      <a href="/JogoPortas/index.html" target="_blank">
-      <img src="/img/porta.png" alt="Jogo das Portas">
-      </a>
-      <h3>Jogo das Portas</span></h3>
-      <p>Resolva equações e escolha a porta certa! Teste seu raciocínio rápido em um desafio matemático.</p>
-    </div>
-
-    <div class="cartao">
-      <a href="/JogoCampo/index.html" target="_blank">
-      <img src="img/bomba.png" alt="Jogo das Portas">
-      </a>
-      <h3>Campo Minado</span></h3>
+  <section id="secao" class="jogos">
+    <div class="jogos-conteudo">
+      <h2>Jogos</h2>
       <p>
-        Resolva equações e escolha a porta certa! Teste seu raciocínio rápido em um desafio matemático.
+        Explore jogos educativos que tornam o aprendizado da matemática mais leve, divertido e interativo.
+        Pratique conceitos enquanto se diverte!
       </p>
     </div>
 
-    <div class="cartao">
-      <a href="/JogoCorrida/index.html" target="_blank">
-      <img src="img/carros.png" alt="Jogo das Portas">
-      </a>
-      <h3>Corridam de Vetores</span></h3>
-      <p>
-        Resolva equações e escolha a porta certa! Teste seu raciocínio rápido em um desafio matemático.
-      </p>
-    </div>
+    <div class="cartoes">
+      <div class="cartao">
+        <a href="/JogoPortas/index.html" target="_blank">
+          <img src="/img/porta.png" alt="Jogo das Portas">
+        </a>
+        <h3>Jogo das Portas</span></h3>
+        <p>Resolva equações e escolha a porta certa! Teste seu raciocínio rápido em um desafio matemático.</p>
+      </div>
 
-    <div class="cartao">
-      <a href="/JogoBatalha/index.html" target="_blank">
-      <img src="img/mago.png" alt="Jogo das Portas">
-      </a>
-      <h3>Batalha dos Limites</span></h3>
-      <p>
-        Resolva equações e escolha a porta certa! Teste seu raciocínio rápido em um desafio matemático.
-      </p>
+      <div class="cartao">
+        <a href="/JogoCampo/index.html" target="_blank">
+          <img src="img/bomba.png" alt="Jogo das Portas">
+        </a>
+        <h3>Campo Minado</span></h3>
+        <p>
+          Resolva equações e escolha a porta certa! Teste seu raciocínio rápido em um desafio matemático.
+        </p>
+      </div>
+
+      <div class="cartao">
+        <a href="/JogoCorrida/index.html" target="_blank">
+          <img src="img/carros.png" alt="Jogo das Portas">
+        </a>
+        <h3>Corridam de Vetores</span></h3>
+        <p>
+          Resolva equações e escolha a porta certa! Teste seu raciocínio rápido em um desafio matemático.
+        </p>
+      </div>
+
+      <div class="cartao">
+        <a href="/JogoBatalha/index.html" target="_blank">
+          <img src="img/mago.png" alt="Jogo das Portas">
+        </a>
+        <h3>Batalha dos Limites</span></h3>
+        <p>
+          Resolva equações e escolha a porta certa! Teste seu raciocínio rápido em um desafio matemático.
+        </p>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
   <section class="quiz-cta">
     <div class="quiz-container">
@@ -174,13 +195,25 @@
         <h2>Desafie sua mente com nossos <br><span>Quizzes Matemáticos!</span></h2>
         <p>Teste seus conhecimentos com quizzes rápidos e interativos. São perguntas de diversos níveis e temas para
           você aprender se divertindo!</p>
-        <a href="#" class="btn-quiz">Começar Quiz</a>
+        <a href="/quizz/index.html" target="_blank" class="btn-quiz">Começar Quiz</a>
+      </div>
+    </div>
+  </section>
+
+    <section class="quiz-cta">
+    <div class="quiz-container">
+      <div class="quiz-image">
+        <img src="/img/grafico.png" alt="Tablet com quiz" />
+      </div>
+      <div class="quiz-text">
+        <h2>Crie Gráficos Dinâmicos</span></h2>
+        <p>Explore o gráfico dinâmico: insira seus dados e visualize o resultado em tempo real. Explore tendências, compare informações e tome decisões com base em representações visuais claras e interativas</p>
+        <a href="/Gráfico/index.html" target="_blank" class="btn-quiz">Abrir Gráfico Dinâmico</a>
       </div>
     </div>
   </section>
 
  
-
   <footer class="site-footer">
     <div class="footer-container">
       <div class="footer-logo">

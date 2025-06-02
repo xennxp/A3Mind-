@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Navbar com Dropdown</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #4B2E83;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: white;
+      padding: 15px 30px;
+      border-radius: 20px;
+      margin: 20px auto;
+      width: 80%;
+    }
+
+    .logo {
+      font-weight: bold;
+      color: #6C63FF;
+      font-size: 24px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 40px;
+      list-style: none;
+    }
+
+    .nav-item {
+      position: relative;
+    }
+
+    .nav-item > a {
+      text-decoration: none;
+      color: #6C63FF;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    .nav-item:hover > a {
+      color: #4B2E83;
+    }
+
+    /* Dropdown */
+    .dropdown {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      display: none;
+      flex-direction: column;
+      padding: 10px 0;
+      z-index: 100;
+    }
+
+    .dropdown a {
+      padding: 10px 20px;
+      text-decoration: none;
+      color: #6C63FF;
+      transition: background 0.3s;
+    }
+
+    .dropdown a:hover {
+      background: #f0f0f0;
+    }
+
+    .nav-item:hover .dropdown {
+      display: flex;
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="logo">Mind+</div>
+    <ul class="nav-links">
+      <li class="nav-item">
+        <a href="#">Home</a>
+      </li>
+      <li class="nav-item">
+        <a href="#">Jogos</a>
+        <div class="dropdown">
+          <a href="#">Jogo 1</a>
+          <a href="#">Jogo 2</a>
+          <a href="#">Jogo 3</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a href="#">Quiz</a>
+        <div class="dropdown">
+          <a href="#">Quiz Fácil</a>
+          <a href="#">Quiz Médio</a>
+          <a href="#">Quiz Difícil</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a href="#">Aprender</a>
+        <div class="dropdown">
+          <a href="#">Teoria</a>
+          <a href="#">Exercícios</a>
+        </div>
+      </li>
+    </ul>
+  </nav>
+
+</body>
+</html>
